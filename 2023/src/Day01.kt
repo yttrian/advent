@@ -1,8 +1,10 @@
+import arrow.core.fold
+
 private fun rip(line: String) = "${line.first(Char::isDigit)}${line.last(Char::isDigit)}".toInt()
 
 private fun part1(input: List<String>): Int = input.map(::rip).sum()
 
-val fixes = listOf(
+val fixes = mapOf(
     "one" to 1,
     "two" to 2,
     "three" to 3,
@@ -12,7 +14,7 @@ val fixes = listOf(
     "seven" to 7,
     "eight" to 8,
     "nine" to 9,
-).map { (key, value) -> key to "$key$value$key" }
+).mapValues { (key, value) -> "$key$value$key" }
 
 private fun fix(line: String) = fixes.fold(line) { fixed, (bad, good) -> fixed.replace(bad, good) }
 

@@ -1,1 +1,4 @@
 product: jvm/app
+
+dependencies:
+  - io.arrow-kt:arrow-core:1.2.0
