@@ -1,0 +1,14 @@
+{
+  "name": "yttrian/advent-2024",
+  "require": {
+    "illuminate/collections": "^11.34",
+    "php": "^8.4",
+    "symfony/console": "^7.2",
+    "symfony/var-dumper": "^7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Yttrian\\Advent2024\\": "src/"
+    }
+  }
+}

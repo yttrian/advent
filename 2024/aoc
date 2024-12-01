@@ -1,0 +1,30 @@
+#!/usr/bin/env php
+<?php
+// application.php
+
+require __DIR__.'/vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+
+$application = new Application();
+
+$application->register('run')
+    ->addArgument('day', InputArgument::REQUIRED)
+    ->setCode(function (InputInterface $input, OutputInterface $output) {
+        $day = $input->getArgument('day');
+        $day = str_pad($day, 2, '0', STR_PAD_LEFT);
+
+        $solution = "\Yttrian\Advent2024\Day$day";
+        $solution = new $solution;
+
+        $output->write("Running Day $day...\n");
+        $solution->run();
+
+        return Command::SUCCESS;
+    });
+
+$application->run();
