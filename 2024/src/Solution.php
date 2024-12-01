@@ -8,7 +8,7 @@ use ReflectionClass;
 
 abstract class Solution
 {
-    function run(): void
+    public function run(): void
     {
         $class = new ReflectionClass($this);
         $class = $class->getShortName();
@@ -23,7 +23,7 @@ abstract class Solution
         print $this->second($input)."\n";
     }
 
-    abstract function first(Collection $input);
+    abstract public function first(Collection $input);
 
-    abstract function second(Collection $input);
+    abstract public function second(Collection $input);
 }
