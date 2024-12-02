@@ -1,11 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Yttrian\Advent2024;
+namespace Yttrian\Advent2024\Solutions;
 
 use Illuminate\Support\Collection;
+use Yttrian\Advent2024\Support\Solution;
 
-class Day01 extends Solution
+class Day01 implements Solution
 {
     private function lists(Collection $input): array
     {

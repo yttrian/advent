@@ -8,7 +8,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Yttrian\\Advent2024\\": "src/"
+      "Yttrian\\Advent2024\\Solutions\\": "solutions/",
+      "Yttrian\\Advent2024\\Support\\": "support/"
     }
   }
 }
