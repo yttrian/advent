@@ -33,10 +33,8 @@ class RunCommand extends Command
         $class = $class->getShortName();
 
         $input = __DIR__.'/../inputs/'.$class.'.txt';
-        $input = file_get_contents($input);
-        $input = explode("\n", $input);
+        $input = file($input, flags: FILE_IGNORE_NEW_LINES);
         $input = collect($input);
-        $input->pop();
 
         $output->writeln("Output 1: ".$solution->first($input));
         $output->writeln("Output 2: ".$solution->second($input));
