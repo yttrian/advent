@@ -8,6 +8,9 @@
     "symfony/var-dumper": "^7.2"
   },
   "autoload": {
+    "files": [
+      "support/helpers.php"
+    ],
     "psr-4": {
       "Yttrian\\Advent2024\\Solutions\\": "solutions/",
       "Yttrian\\Advent2024\\Support\\": "support/"

@@ -12,8 +12,8 @@ class Day03 implements Solution
     {
         preg_match_all('/mul\((\d+),(\d+)\)/', $line, $matches);
 
-        $first = collect($matches[1])->map(fn($s) => intval($s));
-        $second = collect($matches[2])->map(fn($s) => intval($s));
+        $first = collect($matches[1])->map('int10');
+        $second = collect($matches[2])->map('int10');
 
         return $first->zip($second)->mapSpread(fn($a, $b) => $a * $b)->sum();
     }
