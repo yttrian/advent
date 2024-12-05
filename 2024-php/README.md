@@ -1,4 +1,4 @@
-# Advent of Code 2024
+# Advent of Code 2024 PHP
 
 My [Advent of Code][aoc] solutions for 2024
 written in [PHP 8.4][php] with [Illuminate Collections][pic].
